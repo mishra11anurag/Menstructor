@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Input Data{% endblock %}
+
+{% block content %}
+    <h1>Input Menstrual Cycle Data</h1>
+    <form method="POST">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required><br>
+        
+        <label for="cycle_length">Cycle Length (days):</label>
+        <input type="number" id="cycle_length" name="cycle_length" required><br>
+        
+        <label for="period_length">Period Length (days):</label>
+        <input type="number" id="period_length" name="period_length" required><br>
+        
+        <label for="symptoms">Symptoms (comma-separated):</label>
+        <input type="text" id="symptoms" name="symptoms"><br>
+        
+        <label for="flow_intensity">Flow Intensity:</label>
+        <input type="text" id="flow_intensity" name="flow_intensity"><br>
+        
+        <label for="ovulation_symptoms">Ovulation Symptoms (comma-separated):</label>
+        <input type="text" id="ovulation_symptoms" name="ovulation_symptoms"><br>
+        
+        <label for="mood_changes">Mood Changes (comma-separated):</label>
+        <input type="text" id="mood_changes" name="mood_changes"><br>
+        
+        <label for="basal_body_temperature">Basal Body Temperature (Celsius):</label>
+        <input type="number" step="0.1" id="basal_body_temperature" name="basal_body_temperature"><br>
+        
+        <label for="weight">Weight (kg):</label>
+        <input type="number" step="0.1" id="weight" name="weight"><br>
+        
+        <label for="lifestyle_factors">Lifestyle Factors (comma-separated):</label>
+        <input type="text" id="lifestyle_factors" name="lifestyle_factors"><br>
+        
+        <label for="medication">Medication (comma-separated):</label>
+        <input type="text" id="medication" name="medication"><br>
+        
+        <label for="sexual_activity">Sexual Activity:</label>
+        <input type="text" id="sexual_activity" name="sexual_activity"><br>
+        
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

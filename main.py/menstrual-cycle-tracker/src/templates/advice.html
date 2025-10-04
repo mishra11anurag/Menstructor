@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Personalized Advice{% endblock %}
+
+{% block content %}
+    <h1>Personalized Advice</h1>
+    {% for category, content in advice.items() %}
+        <h2>{{ category }}</h2>
+        {% if content is mapping %}
+            <ul>
+                {% for item, message in content.items() %}
+                    <li>{{ item }}: {{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <ul>
+                {% for item in content %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

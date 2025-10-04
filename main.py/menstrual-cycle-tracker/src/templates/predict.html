@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Predictions{% endblock %}
+
+{% block content %}
+    <h1>Predicted Dates</h1>
+    <ul>
+        <li>Next Period: {{ predictions.next_period }}</li>
+        <li>Ovulation: {{ predictions.ovulation }}</li>
+        <li>Fertile Window: {{ predictions.fertile_window[0] }} to {{ predictions.fertile_window[1] }}</li>
+    </ul>
+{% endblock %}

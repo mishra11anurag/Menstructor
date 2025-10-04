@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Educational Resources{% endblock %}
+
+{% block content %}
+    <h1>Educational Resources</h1>
+    {% for category, items in resources.items() %}
+        <h2>{{ category.replace('_', ' ').title() }}</h2>
+        <ul>
+            {% for item in items %}
+                <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}

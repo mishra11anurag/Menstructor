@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Menstrual Cycle Tracker</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('input_data') }}">Input Data</a></li>
+            <li><a href="{{ url_for('resources') }}">Educational Resources</a></li>
+        </ul>
+    </nav>
+{% endblock %}

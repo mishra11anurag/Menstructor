@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Display Data{% endblock %}
+
+{% block content %}
+    <h1>Menstrual Cycle Data</h1>
+    <ul>
+        {% for key, value in cycle_data.items() %}
+            <li>{{ key.replace('_', ' ').title() }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('predict') }}">Predict</a>
+    <a href="{{ url_for('advice') }}">Get Advice</a>
+{% endblock %}
